@@ -3,9 +3,18 @@ package FamilyTreee;
 import FamilyTreee.FamilyTree.Type;
 import FamilyTreee.File;
 
+import static FamilyTreee.FamilyTree.Type.*;
+
 
 public class Main {
     public static void main(String[] args) {
+
+        Family family = () -> {
+            System.out.println("Всё генеалогическое древо ");
+            System.out.println("____________________________________________________________");
+        };
+        family.ShowAllFamily();
+
 
         var maxim1 = new Person("Отец Василия и Натальи: Демьянов Максим Олегович 01.11.1960 г.");
         var julia = new Person("Мама Василия и Натальи: Демьянова Юлия Юрьевна 07.03.1961 г.");
@@ -19,8 +28,8 @@ public class Main {
 
         FamilyTree ft = new FamilyTree();
 
-        ft.addNode(maxim1, Type.Father, maxim1);
-        ft.addNode(julia, Type.Mother, julia);
+        ft.addNode(maxim1, Father, maxim1);
+        ft.addNode(julia, Mother, julia);
         ft.addNode(vasya, Type.Husband, vasya);
         ft.addNode(irina, Type.Wife, vasya);
         ft.addNode(maxim, Type.Brother, maxim);

@@ -6,8 +6,22 @@ import java.util.ArrayList;
 
 import static jdk.internal.org.jline.utils.Colors.s;
 
-public class FamilyTree {
+public class  FamilyTree implements Family {
     private ArrayList<Node>tree = new ArrayList<>();
+
+    @Override
+    public void ShowAllFamily() {
+        System.out.println("All Family");
+        System.out.println(Type.Brother);
+        System.out.println(Type.Daughter);
+        System.out.println(Type.Father);
+        System.out.println(Type.Husband);
+        System.out.println(Type.Mother);
+        System.out.println(Type.Sister);
+        System.out.println(Type.Son);
+        System.out.println(Type.Wife);
+
+    }
 
     enum Type {
         Brother, Daughter, Father, Husband, Mother, Sister, Son, Wife
