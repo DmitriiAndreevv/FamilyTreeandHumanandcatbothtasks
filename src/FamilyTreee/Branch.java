@@ -2,7 +2,7 @@ package FamilyTreee;
 
 import java.util.ArrayList;
 
-public class Branch {
+public class Branch implements Family {
     ArrayList<FamilyTree.Node> tree;
 
     public Branch(FamilyTree familyTree){
@@ -18,4 +18,10 @@ public class Branch {
         }
         return result;
     }
+
+    @Override
+    public void ShowAllFamily() {
+
+    }
 }
+

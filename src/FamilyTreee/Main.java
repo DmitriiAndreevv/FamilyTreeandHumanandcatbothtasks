@@ -1,12 +1,13 @@
 package FamilyTreee;
 
 import FamilyTreee.FamilyTree.Type;
-import FamilyTreee.File;
+
+import java.util.Iterator;
 
 import static FamilyTreee.FamilyTree.Type.*;
 
 
-public class Main {
+public abstract class Main {
     public static void main(String[] args) {
 
         Family family = () -> {
@@ -50,16 +51,34 @@ public class Main {
 
         System.out.println(p.people(Father.findAll(maxim1, Type.Father)));
         System.out.println(p.people(Mother.findAll(julia, Type.Mother)));
+        System.out.println("____________________________________________");
+        Retires retires = new Retires(45000);
+        System.out.println(retires.salary);
         System.out.println();
         System.out.println(p.people(Brother.findAll(maxim, Type.Brother)));
-        System.out.println();
         System.out.println(p.people(Sister.findAll(natasha, Type.Sister)));
+        System.out.println("______________________________________");
+        SchoolPlace schoolPlace = new SchoolPlace(21);
+        int schoolNum = schoolPlace.schoolNum;
+
         System.out.println();
         System.out.println(p.people(Husband.findAll(vasya, Type.Husband)));
         System.out.println(p.people(Wife.findAll(vasya, Type.Wife)));
         System.out.println(p.people(children.findAll(vasya, Type.Son)));
         System.out.println(p.people(children.findAll(vasya, Type.Daughter)));
+        System.out.println();
 
+        System.out.println();
+
+        WorkPlace employee = new WorkPlace(Husband," Emex-Company",991554131, 154000);
+
+
+        Iterator<String> components = employee;
+
+        while (components.hasNext()) {
+            System.out.println(employee.next());
+
+        }
 
     }
 }
